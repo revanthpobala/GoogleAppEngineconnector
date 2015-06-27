@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Vatavaranam</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    
+  </head>
+  <body>
+    <body>
+      <table class ="table table-hover ">
+        <tbody>
+          <tr>
+            <th class="active" >Time</th>
+            <th class="active" >Latitude</th>
+            <th class="active" >Longitude</th>
+            <th class="active" >Depth</th>
+            <th class="active" >Magnitude</th>
+            <th class="active" >Magnitude Type</th>
+            <th class="active" >NST</th>
+            <th class="active" >GAP</th>
+            <th class="active" >Dmin</th>
+            <th class="active" >Rms</th>
+            <th class="active" >Net</th>
+            <th class="active" >ID</th>
+             <th class="active" >Updated</th>
+            <th class="active" >Place</th>
+            <th class="active" >Type</th>
+          </tr>
+          {% for row in whether %}
+             <tr>
+               <td>{{ row['Time'] }}</td>
+               <td>{{ row['Latitude'] }}</td>
+                <td>{{ row['Longitude'] }}</td>
+                 <td>{{ row['Depth'] }}</td>
+                  <td>{{ row['Magnitude'] }}</td>
+                   <td>{{ row['Magnitude Type'] }}</td>
+               <td>{{ row['Nst'] }}</td>
+               <td>{{ row['Gap'] }}</td>
+                <td>{{ row['Dmin'] }}</td>
+                 <td>{{ row['Rms'] }}</td>
+                  <td>{{ row['Net'] }}</td>
+                  <td>{{ row['Id'] }}</td>
+                    <td>{{ row['Updated'] }}</td>
+                  <td>{{ row['Place'] }}</td>
+                   <td>{{ row['Type'] }}</td>
+             </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+  </body>
+</html>
